@@ -2,6 +2,8 @@
 
 Proyecto de gestor de contraseñas de escritorio seguro y fácil de usar, desarrollado en **Python** con **CustomTkinter**, que combina la protección tradicional de una clave maestra con la conveniencia y seguridad de la autenticación facial. Las contraseñas se almacenan de forma segura en un archivo `.csv` cifrado, utilizando una clave de cifrado que se guarda en una unidad USB externa para una capa de seguridad adicional.
 
+[Interfaz Principal](./README_images/1.jpg)
+
 ---
 
 ## Características Principales
@@ -21,7 +23,6 @@ Proyecto de gestor de contraseñas de escritorio seguro y fácil de usar, desarr
 
 La seguridad de este proyecto se fundamenta en una estrategia de protección en dos frentes: el **cifrado de datos** y la **autenticación de usuario**. A continuación, se detallan los mecanismos y las tecnologías empleadas para asegurar que las contraseñas permanezcan a salvo.
 
----
 
 ### Protección de Datos con Fernet
 
@@ -31,7 +32,11 @@ El proceso funciona de la siguiente manera:
 
 1.  **Generación de la Clave**: Durante la configuración inicial, se genera una clave de cifrado (`clave.key`) que se guarda estratégicamente en una **unidad USB externa**. Este es un paso crítico, ya que la portabilidad de la clave evita que los datos puedan ser descifrados si el archivo `.csv` es extraído del ordenador, como en el caso de un ataque de malware o robo de dispositivo.
 
+[Generado de clave en el USB](./README_images/2.jpg)
+
 2.  **Cifrado del CSV**: Cuando el usuario cierra el gestor de contraseñas, la función `cifrar_csv` lee el contenido del archivo `passwordsList.csv`, lo encripta por completo con la clave Fernet y sobrescribe el archivo con la versión cifrada en formato binario.
+
+[Listado de contraseñas cifrado](./README_images/6.jpg)
 
 3.  **Descifrado al Inicio**: Al iniciar la aplicación, la función `descifrar_csv` busca la clave en la USB, la carga y la utiliza para descifrar el contenido del archivo `passwordsList.csv`, permitiendo al programa acceder a la información en texto plano para su uso. Una vez finalizada la sesión, el archivo se vuelve a cifrar automáticamente.
 
@@ -58,6 +63,11 @@ El proceso se divide en dos fases principales:
 * **Validación con Umbral**: Se establece un umbral de confianza (`confidence_threshold = 60`). Si el modelo predice el ID correcto y la confianza está por debajo de este umbral durante un tiempo sostenido (3 segundos), la autenticación se considera exitosa. En caso contrario, el acceso es denegado.
 
 Este enfoque de dos pasos garantiza que la autenticación sea tanto precisa como segura, proporcionando una experiencia de usuario fluida sin comprometer la integridad del sistema.
+
+
+[Usuario reconocido y admitido](./README_images/3.png)
+
+[Persona no reconocida y no admitida](./README_images/4.png)
 
 ---
 
@@ -95,9 +105,13 @@ Al iniciar la aplicación, se te pedirá que te autentiques. El método predeter
 
 Si prefieres usar tu clave maestra, haz clic en el botón de la parte inferior para cambiar al modo de contraseña.
 
+[Pantalla de Log In](./README_images/5.jpg)
+
 ### Interfaz Principal
 
 Una vez desbloqueada, verás la interfaz principal. A la izquierda, tienes los botones de acción para añadir contraseñas o modificar tu perfil. A la derecha, se muestra la lista de todas tus contraseñas guardadas.
+
+[Interfaz Principal](./README_images/1.jpg)
 
 ### Gestionar Contraseñas
 
