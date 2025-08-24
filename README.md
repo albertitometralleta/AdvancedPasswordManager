@@ -32,11 +32,15 @@ El proceso funciona de la siguiente manera:
 
 1.  **Generación de la Clave**: Durante la configuración inicial, se genera una clave de cifrado (`clave.key`) que se guarda estratégicamente en una **unidad USB externa**. Este es un paso crítico, ya que la portabilidad de la clave evita que los datos puedan ser descifrados si el archivo `.csv` es extraído del ordenador, como en el caso de un ataque de malware o robo de dispositivo.
 
-[Generado de clave en el USB](./README_images/2.jpg)
+
+Generado de clave en el USB:
+![Generado de clave en el USB](./README_images/2.JPG)
 
 2.  **Cifrado del CSV**: Cuando el usuario cierra el gestor de contraseñas, la función `cifrar_csv` lee el contenido del archivo `passwordsList.csv`, lo encripta por completo con la clave Fernet y sobrescribe el archivo con la versión cifrada en formato binario.
 
-[Listado de contraseñas cifrado](./README_images/6.jpg)
+
+Listado de contraseñas cifrado:
+![Listado de contraseñas cifrado](./README_images/6.jpg)
 
 3.  **Descifrado al Inicio**: Al iniciar la aplicación, la función `descifrar_csv` busca la clave en la USB, la carga y la utiliza para descifrar el contenido del archivo `passwordsList.csv`, permitiendo al programa acceder a la información en texto plano para su uso. Una vez finalizada la sesión, el archivo se vuelve a cifrar automáticamente.
 
@@ -64,10 +68,11 @@ El proceso se divide en dos fases principales:
 
 Este enfoque de dos pasos garantiza que la autenticación sea tanto precisa como segura, proporcionando una experiencia de usuario fluida sin comprometer la integridad del sistema.
 
+Usuario reconocido y admitido:
+![Usuario reconocido y admitido](./README_images/3.png)
 
-[Usuario reconocido y admitido](./README_images/3.png)
-
-[Persona no reconocida y no admitida](./README_images/4.png)
+Persona no reconocida y no admitida:
+![Persona no reconocida y no admitida](./README_images/4.png)
 
 ---
 
@@ -105,13 +110,15 @@ Al iniciar la aplicación, se te pedirá que te autentiques. El método predeter
 
 Si prefieres usar tu clave maestra, haz clic en el botón de la parte inferior para cambiar al modo de contraseña.
 
-[Pantalla de Log In](./README_images/5.jpg)
+Pantalla de Log In:
+![Pantalla de Log In](./README_images/5.JPG)
 
 ### Interfaz Principal
 
 Una vez desbloqueada, verás la interfaz principal. A la izquierda, tienes los botones de acción para añadir contraseñas o modificar tu perfil. A la derecha, se muestra la lista de todas tus contraseñas guardadas.
 
-[Interfaz Principal](./README_images/1.jpg)
+Interfaz Principal:
+![Interfaz Principal](./README_images/1.jpg)
 
 ### Gestionar Contraseñas
 
