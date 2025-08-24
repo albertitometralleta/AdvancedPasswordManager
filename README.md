@@ -40,7 +40,7 @@ Generado de clave en el USB:
 
 
 Listado de contraseñas cifrado:
-![Listado de contraseñas cifrado](./README_images/6.jpg)
+![Listado de contraseñas cifrado](./README_images/6.JPG)
 
 3.  **Descifrado al Inicio**: Al iniciar la aplicación, la función `descifrar_csv` busca la clave en la USB, la carga y la utiliza para descifrar el contenido del archivo `passwordsList.csv`, permitiendo al programa acceder a la información en texto plano para su uso. Una vez finalizada la sesión, el archivo se vuelve a cifrar automáticamente.
 
@@ -118,7 +118,7 @@ Pantalla de Log In:
 Una vez desbloqueada, verás la interfaz principal. A la izquierda, tienes los botones de acción para añadir contraseñas o modificar tu perfil. A la derecha, se muestra la lista de todas tus contraseñas guardadas.
 
 Interfaz Principal:
-![Interfaz Principal](./README_images/1.jpg)
+![Interfaz Principal](./README_images/1.JPG)
 
 ### Gestionar Contraseñas
 
