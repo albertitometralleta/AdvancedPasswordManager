@@ -2,7 +2,7 @@
 
 Proyecto de gestor de contraseñas de escritorio seguro y fácil de usar, desarrollado en **Python** con **CustomTkinter**, que combina la protección tradicional de una clave maestra con la conveniencia y seguridad de la autenticación facial. Las contraseñas se almacenan de forma segura en un archivo `.csv` cifrado, utilizando una clave de cifrado que se guarda en una unidad USB externa para una capa de seguridad adicional.
 
-[Interfaz Principal](./README_images/1.jpg)
+![Interfaz Principal](./README_images/1.JPG)
 
 ---
 
